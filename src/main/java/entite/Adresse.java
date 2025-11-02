@@ -1,5 +1,7 @@
 package entite;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 
 @Entity
@@ -19,4 +21,13 @@ public class Adresse {
 
     @Column(name = "code_postal")
     private String codePostal;
+
+
+    @OneToOne(mappedBy = "adresse")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Client client;
+
+
+
 }

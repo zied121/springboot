@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TpCafeZiedBenSalahApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(TpCafeZiedBenSalahApplication.class, args);
     }
 

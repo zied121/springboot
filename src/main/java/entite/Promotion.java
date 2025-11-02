@@ -2,7 +2,12 @@ package entite;
 
 import jakarta.persistence.*;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name ="promotion")
@@ -20,4 +25,9 @@ public class Promotion {
 
     @Column(name = "date_fin_promo")
     private LocalDate dateFinPromo;
+
+    @ManyToMany(mappedBy = "promotions")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private List<Article> articles = new ArrayList<>();
 }
