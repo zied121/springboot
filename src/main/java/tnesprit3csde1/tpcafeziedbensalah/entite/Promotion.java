@@ -1,9 +1,9 @@
-package entite;
+package tnesprit3csde1.tpcafeziedbensalah.entite;
 
 import jakarta.persistence.*;
 
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,6 +11,13 @@ import java.util.List;
 
 @Entity
 @Table(name ="promotion")
+@Getter
+@Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@ToString
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Promotion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,8 +1,9 @@
-package entite;
+package tnesprit3csde1.tpcafeziedbensalah.entite;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,14 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "client")
+@Getter
+@Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@ToString
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
+
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

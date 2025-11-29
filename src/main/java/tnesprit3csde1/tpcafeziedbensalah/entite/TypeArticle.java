@@ -1,4 +1,4 @@
-package entite;
+package tnesprit3csde1.tpcafeziedbensalah.entite;
 
 public enum TypeArticle {
     BOISSON,
