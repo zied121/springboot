@@ -1,9 +1,15 @@
 package tnesprit3csde1.tpcafeziedbensalah.Services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tnesprit3csde1.tpcafeziedbensalah.entite.Detail_Commande;
 import tnesprit3csde1.tpcafeziedbensalah.repositeries.Detail_CommandeRepository;
 import java.util.List;
 
+
+
+@Service
+@AllArgsConstructor
 public class DetailCommandeService implements IDetailCommandeService {
     Detail_CommandeRepository detailCommandeRepository;
 

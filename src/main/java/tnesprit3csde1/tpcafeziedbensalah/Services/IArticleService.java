@@ -14,4 +14,5 @@ public interface IArticleService {
     void deleteArticleById(long id);
     long countingArticles();
     boolean verifArticleById(long id);
+    List<Article> findByPromotionStartMonth(int month);
 }

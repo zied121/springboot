@@ -1,9 +1,12 @@
 package tnesprit3csde1.tpcafeziedbensalah.Services;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tnesprit3csde1.tpcafeziedbensalah.entite.Adresse;
 import tnesprit3csde1.tpcafeziedbensalah.repositeries.AdresseRepository;
 import java.util.List;
 
-
+@Service
+@AllArgsConstructor
 public class AdresseService  implements IAdresseService {
     AdresseRepository adresseRepository;
     @Override

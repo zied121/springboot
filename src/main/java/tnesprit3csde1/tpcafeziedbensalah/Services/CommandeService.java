@@ -1,10 +1,15 @@
 package tnesprit3csde1.tpcafeziedbensalah.Services;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tnesprit3csde1.tpcafeziedbensalah.entite.Commande;
 import tnesprit3csde1.tpcafeziedbensalah.repositeries.CommandeRepository;
 
 import java.time.LocalDate;
 import java.util.List;
 
+
+@Service
+@AllArgsConstructor
 public class CommandeService implements ICommandeService {
     CommandeRepository commandeRepository;
 

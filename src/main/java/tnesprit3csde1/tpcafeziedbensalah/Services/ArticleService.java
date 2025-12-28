@@ -1,8 +1,13 @@
 package tnesprit3csde1.tpcafeziedbensalah.Services;
 import java.util.List;
+
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tnesprit3csde1.tpcafeziedbensalah.entite.Article;
 import tnesprit3csde1.tpcafeziedbensalah.repositeries.ArticleRepository;
 
+@Service
+@AllArgsConstructor
 public class ArticleService implements IArticleService {
     ArticleRepository articleRepository;
 
@@ -58,5 +63,11 @@ public class ArticleService implements IArticleService {
     @Override
     public boolean verifArticleById(long id) {
         return articleRepository.existsById(id);
+    }
+
+    @Override
+    public List<Article> findByPromotionStartMonth(int month) {
+        if (month < 1 || month > 12) throw new IllegalArgumentException("Month must be between 1 and 12");
+        return articleRepository.findByPromotionStartMonth(month);
     }
 }
